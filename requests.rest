@@ -1,0 +1,13 @@
+# GET http://localhost:3001/todos
+
+# ###
+
+# POST http://localhost:3001/todo/new
+# Content-Type: application/json
+
+# ### 
+
+# DELETE http://localhost:3001/todo/delete/62a7c4f18011d0b259c68b07
+
+# ###
+# PUT http://localhost:3001/todo/complete/62a7ff6b06c0e3bf9cefb798
