@@ -42,7 +42,7 @@ app.get('/api/todos/:userId', async (req, res) => {
     res.json(todos);
 });
 
-app.post('/api/todo/new', (req, res) => {
+app.post('/todo/new', (req, res) => {
     const todo = new Todo({
         authorId:req.body.authorId,
         text: req.body.text
@@ -51,12 +51,12 @@ app.post('/api/todo/new', (req, res) => {
     res.json(todo);
 });
 
-app.delete('/api/todo/delete/:id', async (req, res) => {
+app.delete('/todo/delete/:id', async (req, res) => {
     const result = await Todo.findByIdAndDelete(req.params.id)
     res.json(result);
 });
 
-app.get ('/api/todo/complete/:id', async (req, res) => {
+app.get ('/todo/complete/:id', async (req, res) => {
     const todo = await Todo.findById(req.params.id);
     todo.complete = !todo.complete; // to be true value
 
